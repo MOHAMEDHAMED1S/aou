@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #005f73;
+    padding: 30px;
+    color: white;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #005f73;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #005f73;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #005f73;
+    color: white;
+}
+header {
+    background-color: #005f73;
+    padding: 10px; /* تم تقليل المسافة حول الشعار */
+}
+
+.logo {
+    max-width: 80px; /* تم تقليل حجم الشعار */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 15px 20px; /* تقليل المسافة لجعل الـ header صغيرًا */
+    display: flex;
+    position: relative;
+    overflow: hidden; /* لإخفاء العناصر خلال الأنيميشن */
+}
+
+.logo-container {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s ease-out forwards; /* أنيميشن سلس للشعار */
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo {
+    max-width: 100px; /* حجم الشعار */
+}
+
+.card-container {
+    padding: 40px 20px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #005f73;
+    color: white;
+}
