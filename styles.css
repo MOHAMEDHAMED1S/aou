@@ -93,6 +93,11 @@ h1 {
     font-size: 1.5rem;
     color: #005f73;
 }
+.card h4 {
+        font-size: 1.3rem;
+
+    color: #005f73;
+}
 
 /* إذا كنت ترغب في إضافة بعض الهوامش بين البطاقات */
 .card + .card {
