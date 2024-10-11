@@ -573,7 +573,7 @@ footer {
   background-color: var(--bg-color);
   border-radius: 100%;
   border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);   
+  box-shadow: 4px 4px var(--main-color);  
 
   /* Add this line to position the button to the right */
   float: right;
@@ -615,6 +615,6 @@ footer {
 
 .theme:active {
   box-shadow: 0px 0px var(--main-color);
-  transform: translate(3px, 3px);   
+  transform: translate(3px, 3px);  
 
 }
