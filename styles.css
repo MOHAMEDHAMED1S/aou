@@ -126,7 +126,7 @@ body {
 }
 
 header {
-    background-color: #f0eeee;
+    background-color: #ffffff;
     padding: 5px 10px; /* تقليل المسافة لجعل الـ header صغيرًا */
     display: flex;
     position: relative;
