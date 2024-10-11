@@ -6,6 +6,140 @@
     <title>حاسبة GPA</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+
+.container {
+        display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+    padding: 5% 2%; 
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        align-items: center;
+
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subject-container {
+    margin-bottom: 20px;
+}
+
+.subject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subject input {
+    padding: 10px;
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+
+.calculate-btn:hover {
+    background-color: #007bb5;
+}
+
+.clear-btn {
+    background-color: #ff160571;
+}
+
+.clear-btn:hover {
+    background-color: #f0423f;
+}
+
+.switch-btn {
+    background-color: #555;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.switch-btn:hover {
+    background-color: #444;
+}
+
+.gpa-bar {
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gpa-progress {
+    height: 100%;
+    background-color: #007bff;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.gpa-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.cumulative-input {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button:focus, input:focus {
+    outline: none;
+    border-color: #007bff;
+}</style>
 </head>
     <div id="loader" class="loader-wrapper">
     <div class="wrapper">
@@ -75,6 +209,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
+    <script src="gpa.js"></script>
 </body>
 </html>

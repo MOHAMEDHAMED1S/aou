@@ -3,5 +3,5 @@ window.addEventListener("load", function() {
     setTimeout(function() {
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-    }, 800); // مدة التأخير 1 ثانية
+    }, 600); // مدة التأخير 1 ثانية
 });
