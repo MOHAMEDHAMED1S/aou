@@ -4,17 +4,20 @@
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
     text-decoration: none; 
+    
 }
 
 body {
-    background-color: #f9f9f9;
+background-image: radial-gradient(#0a10ff 0.5px, transparent 0.5px);
+background-size: 34px 34px;
+background-color: #fefefe;
     color: #333;
     text-align: center;
 }
 
 header {
-    background-color: #005f73;
-    padding: 30px;
+
+    padding: 3px;
     color: white;
 }
 
@@ -123,8 +126,8 @@ body {
 }
 
 header {
-    background-color: #ffffff;
-    padding: 15px 20px; /* تقليل المسافة لجعل الـ header صغيرًا */
+    background-color: #f0eeee;
+    padding: 5px 10px; /* تقليل المسافة لجعل الـ header صغيرًا */
     display: flex;
     position: relative;
     overflow: hidden; /* لإخفاء العناصر خلال الأنيميشن */
