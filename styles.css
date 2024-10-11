@@ -26,27 +26,45 @@ h1 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-
 .card-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
+    align-items: center; 
+    gap: 20px; 
+    padding: 5% 2%; 
 }
 
 .card {
     background-color: #ffffff;
     border-radius: 15px;
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
+    padding: 5%; 
+    width: 90%; /* استخدم عرضًا نسبيًا */
+    max-width: 640px; 
+    min-width: 640px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+}
+
+/* إضافة ميديا كويري لتحسين العرض على الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 5%; 
+    width: 90%; /* استخدم عرضًا نسبيًا */
+    max-width: 640px; 
+    min-width: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
 }
 
 .card:hover {
@@ -62,6 +80,11 @@ h1 {
 .card h3 {
     font-size: 1.5rem;
     color: #005f73;
+}
+
+/* إذا كنت ترغب في إضافة بعض الهوامش بين البطاقات */
+.card + .card {
+    margin-top: 20px; /* أو أي قيمة تفضلها */
 }
 
 footer {
@@ -129,3 +152,28 @@ footer {
     background-color: #005f73;
     color: white;
 }
+.card-link {
+  text-decoration: none;  /* إزالة الخط تحت النص */
+}
+ .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .search-button {
+            padding: 10px;
+            margin-left: 5px;
+            background: #005f73;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background: #016f85;
+        }
