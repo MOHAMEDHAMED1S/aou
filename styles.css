@@ -22,7 +22,6 @@ header {
 
 .logo {
     max-width: 120px;
-    margin-bottom: 10px;
 }
 
 h1 {
@@ -219,6 +218,9 @@ footer {
   inset: 0;
   height: 100%;
   transform: translateX(-100%);
+
+    padding-bottom: 0px;
+
 }
 
 .theme__icon,
