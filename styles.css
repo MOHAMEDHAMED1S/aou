@@ -575,7 +575,6 @@ footer {
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);   
 
-  /* Add this line to position the button to the right */
   float: right;
 }
 
