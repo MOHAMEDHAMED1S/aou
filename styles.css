@@ -111,6 +111,8 @@ footer {
     color: white;
 }
 header {
+      justify-content: space-between;
+
     background-color: #005f73;
     padding: 10px; /* تم تقليل المسافة حول الشعار */
 }
@@ -560,3 +562,60 @@ footer {
             background: linear-gradient(320deg, rgb(165, 168, 171), rgb(114, 114, 116));
             color: #ffffff;
         }
+        .theme {
+  --bg-color: #fff;
+  --main-color: #005f73;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);   
+
+  /* Add this line to position the button to the right */
+  float: right;
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% -13px);
+  left: calc(50% -13px);
+  width: 26px;
+  height: 26px;
+}
+
+.icon.icon-moon {
+  fill: var(--main-color);
+}
+
+.icon.icon-sun {
+  stroke: var(--main-color);
+  display: none;
+}
+
+.input:checked ~ .icon.icon-sun {
+  display: block;
+}
+
+.input:checked ~ .icon.icon-moon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);   
+
+}
