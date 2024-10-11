@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة GPA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <div id="loader" class="loader-wrapper">
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+</style>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="شعار الجامعة" class="logo">
+        </div>
+    </header>
+<body>
+
+
+    <main>
+        <div class="container">
+            <h1>حاسبة GPA</h1>
+            <div id="gpa-calculator">
+                <div id="inputs" class="subject-container"></div>
+                
+                <button class="btn add-btn" onclick="createSubjectInput()">إضافة مادة</button>
+
+                <div class="btn-group">
+                    <button class="btn calculate-btn" onclick="calculateGPA()">احسب المعدل</button>
+                    <button class="btn clear-btn" onclick="removeAllSubjects()">مسح المواد</button>
+                </div>
+
+                <div id="result">
+                    <div class="gpa-bar">
+                        <div class="gpa-progress"></div>
+                        <div class="gpa-text">0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cumulative-gpa-inputs" style="display: none;">
+                <h2>المعدل التراكمي</h2>
+                <div class="cumulative-input">
+                    <input type="text" id="oldGPA" placeholder="أدخل المعدل القديم">
+                </div>
+                <div class="cumulative-input">
+                    <input type="text" id="oldGPAHours" placeholder="أدخل عدد الساعات القديمة">
+                </div>
+                <div class="cumulative-input">
+                    <input type="text" id="newGPA" placeholder="أدخل المعدل الجديد">
+                </div>
+                <div class="cumulative-input">
+                    <input type="text" id="newGPAHours" placeholder="أدخل عدد الساعات الجديدة">
+                </div>
+                <button class="btn calculate-btn" onclick="calculateCumulativeGPA()">احسب المعدل التراكمي</button>
+
+                <div id="cumulative-result">
+                    <div class="gpa-bar">
+                        <div class="gpa-progress"></div>
+                        <div class="gpa-text">0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn switch-btn" onclick="toggleGPASections()">تبديل إلى المدخلات التراكمية</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
