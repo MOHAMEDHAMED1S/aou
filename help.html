@@ -3,62 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جروبات الواتساب </title>
+    <title> المساعدة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            text-align: right;
+        }
+        .search-bar {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .topics {
+            display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+        }
+        .topic {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 5%;
+            margin: 1em;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            flex-direction: column;
+        }
+        .topic-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-    <div id="loader" class="loader-wrapper">
-    <div class="wrapper">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-    </div>
-</div>
-<style>
-*{
-    color: black;
-}
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        color: white;
-        padding: 20px;
-    }
-    h1 {
-        text-align: right;
-    }
-    .search-bar {
-        background-color: #333;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .topics {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-    .topic {
-        background-color: #ffffff;
-    border-radius: 15px;
-    padding: 5%;
-
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    flex-direction: column;
-    }
-    .topic-icon {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-</style>
 <body>
+    <div id="loader" class="loader-wrapper">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
     <header>
         <div class="logo-container">
           <a href="index.html">  <img src="logo.png" alt="شعار الجامعة" class="logo"></a>
@@ -66,16 +68,14 @@
     </header>
 
     <main>
-
         <div class="search-container">
+                        <button class="search-button"><i class="fas fa-search"></i></button>
             <input type="text" class="search-input" id="searchInput" placeholder="كيف يمكننا مساعدتك؟">
-            <button class="search-button"><i class="fas fa-search"></i></button>
+
         </div>
         <div class="container">
             <h1>كيف يمكننا مساعدتك؟</h1>
-
-    
-            <div class="topics">
+            <div class="topics" id="topics"> <!-- إضافة معرف للتعرف على هذا العنصر في البحث -->
                 <div class="topic">
                     <div class="topic-icon">🔒</div>
                     <h3>الخصوصية والأمان</h3>
@@ -93,36 +93,26 @@
                 </div>
             </div>
         </div>
-
-       
     </main>
-<script>
-const searchInput = document.getElementById('searchInput');
-const cardContainer = document.getElementById('cardContainer');
+    
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const topicsContainer = document.getElementById('topics'); // تصحيح العنصر هنا
+        const topics = topicsContainer.getElementsByClassName('topic'); // الحصول على العناصر الصحيحة
 
-searchInput.addEventListener('input', function() {
-    const filter = searchInput.value.toLowerCase()
-        .replace(/[^a-z0-9أ-ي]/g, '') 
-        .replace(/\s+/g, ''); 
-    const cards = cardContainer.getElementsByClassName('card-link');
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase()
+                .replace(/[^a-z0-9أ-ي]/g, '')
+                .replace(/\s+/g, '');
 
-    Array.from(cards).forEach(function(card) {
-        const cardTitle = card.querySelector('h3').textContent.toLowerCase()
-            .replace(/[^a-z0-9أ-ي]/g, '') 
-            .replace(/\s+/g, ''); 
-        if (cardTitle.includes(filter) && cardTitle !== '0') {
-            card.style.display = ''; 
-        } else {
-            card.style.display = 'none';
-        }
-    });
-});</script>
+            Array.from(topics).forEach(function(card) {
+                const cardTitle = card.querySelector('h3').textContent.toLowerCase()
+                    .replace(/[^a-z0-9أ-ي]/g, '')
+                    .replace(/\s+/g, '');
+                card.style.display = cardTitle.includes(filter) ? '' : 'none'; // تحسين طريقة العرض
+            });
+        });
+    </script>
     <script src="scripts.js"></script>
-
 </body>
 </html>
-
-
-
-
-
