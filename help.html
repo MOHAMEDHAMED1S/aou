@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جروبات الواتساب </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <div id="loader" class="loader-wrapper">
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+<style>
+*{
+    color: black;
+}
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        color: white;
+        padding: 20px;
+    }
+    h1 {
+        text-align: right;
+    }
+    .search-bar {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .topics {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .topic {
+        background-color: #ffffff;
+    border-radius: 15px;
+    padding: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    flex-direction: column;
+    }
+    .topic-icon {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="شعار الجامعة" class="logo">
+        </div>
+    </header>
+
+    <main>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="كيف يمكننا مساعدتك؟">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="container">
+            <h1>كيف يمكننا مساعدتك؟</h1>
+
+    
+            <div class="topics">
+                <div class="topic">
+                    <div class="topic-icon">🔒</div>
+                    <h3>الخصوصية والأمان</h3>
+                    <p>قم بالتحكم في تحديد الأشخاص الذين يمكنهم رؤية ما تشاركه وإضافة طبقة حماية إضافية إلى حسابك.</p>
+                </div>
+                <div class="topic">
+                    <div class="topic-icon">🔑</div>
+                    <h3>تسجيل الدخول وكلمة السر</h3>
+                    <p>يمكن إصلاح مشكلات تسجيل الدخول والتعرّف على كيفية تغيير كلمة السر أو إعادة تعيينها.</p>
+                </div>
+                <div class="topic">
+                    <div class="topic-icon">⚙️</div>
+                    <h3>إعدادات حسابي</h3>
+                    <p>يمكنك تعديل الإعدادات وإدارة الإشعارات والتعرّف على تغييرات الأسماء وغير ذلك.</p>
+                </div>
+            </div>
+        </div>
+
+       
+    </main>
+<script>
+const searchInput = document.getElementById('searchInput');
+const cardContainer = document.getElementById('cardContainer');
+
+searchInput.addEventListener('input', function() {
+    const filter = searchInput.value.toLowerCase()
+        .replace(/[^a-z0-9أ-ي]/g, '') 
+        .replace(/\s+/g, ''); 
+    const cards = cardContainer.getElementsByClassName('card-link');
+
+    Array.from(cards).forEach(function(card) {
+        const cardTitle = card.querySelector('h3').textContent.toLowerCase()
+            .replace(/[^a-z0-9أ-ي]/g, '') 
+            .replace(/\s+/g, ''); 
+        if (cardTitle.includes(filter) && cardTitle !== '0') {
+            card.style.display = ''; 
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});</script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
+
+
+
+
+
