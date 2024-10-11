@@ -180,7 +180,7 @@ footer {
         .search-input {
             padding: 10px;
             text-align: right; /* لجعل النص يظهر من اليمين */
-            width: 300px;
+            width: 250px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
