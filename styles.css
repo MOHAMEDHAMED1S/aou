@@ -61,7 +61,7 @@ h1 {
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
     max-width: 640px; 
-    min-width: 300px; 
+    min-width: 355px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
