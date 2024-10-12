@@ -36,7 +36,7 @@ header.dark-mode {
 }
 .logo-link {
   display: block; /* لجعل العنصر قابل للنقر بالكامل */
-  width: 150px; /* عرض الشعار */
+  width: 50px; /* عرض الشعار */
   height: 50px; /* ارتفاع الشعار */
   background-image: url('images/logo.png'); /* مسار الصورة */
   background-size: contain; /* جعل الصورة تناسب حجم العنصر */
@@ -45,7 +45,7 @@ header.dark-mode {
 
 }.logo-link.dark-mode {
   display: block; /* لجعل العنصر قابل للنقر بالكامل */
-  width: 150px; /* عرض الشعار */
+  width: 50px; /* عرض الشعار */
   height: 50px; /* ارتفاع الشعار */
   background-image: url('images/logo2.png'); /* مسار الصورة */
   background-size: contain; /* جعل الصورة تناسب حجم العنصر */
