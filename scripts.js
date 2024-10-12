@@ -28,3 +28,20 @@ window.addEventListener("load", function() {
 
         localStorage.setItem('darkMode', isChecked);
     });
+    // عندما يقوم المستخدم بالتمرير 100px من الأعلى، يظهر الزر
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    let backToTopButton = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+}
+
+// عند الضغط على الزر، يرجع المستخدم إلى أعلى الصفحة
+document.querySelector('.back-to-top').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

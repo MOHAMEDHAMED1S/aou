@@ -775,3 +775,24 @@ header.dark-mode {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
+/* زر العودة إلى الأعلى */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #d8d9da72; /* لون الخلفية */
+    color: #005f73; /* لون النص */
+    padding: 10px 15px;
+    border-radius: 50%; /* جعل الزر دائري */
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000; /* لكي يكون فوق العناصر الأخرى */
+}
+
+.back-to-top:hover {
+    background-color: #d8d9dac6; /* تغيير اللون عند التمرير */
+    color: #005f73;
+}
