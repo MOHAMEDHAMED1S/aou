@@ -14,20 +14,54 @@ background-color: #fefefe;
     color: #333;
     text-align: center;
 }
+body.dark-mode {
+background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px);
+background-size: 34px 34px;
+background-color: #454646;
+    color: #ffffff;
+    text-align: center;
+}
 
 header {
 
     color: white;
 }
+header.dark-mode {
+
+    color: #4a4949;
+}
 
 .logo {
     max-width: 120px;
 }
+.logo-link {
+  display: block; /* لجعل العنصر قابل للنقر بالكامل */
+  width: 150px; /* عرض الشعار */
+  height: 50px; /* ارتفاع الشعار */
+  background-image: url('images/logo.png'); /* مسار الصورة */
+  background-size: contain; /* جعل الصورة تناسب حجم العنصر */
+  background-repeat: no-repeat; /* منع تكرار الصورة */
+  background-position: center; /* ضبط الصورة لتكون في المركز */
 
+}.logo-link.dark-mode {
+  display: block; /* لجعل العنصر قابل للنقر بالكامل */
+  width: 150px; /* عرض الشعار */
+  height: 50px; /* ارتفاع الشعار */
+  background-image: url('images/logo2.png'); /* مسار الصورة */
+  background-size: contain; /* جعل الصورة تناسب حجم العنصر */
+  background-repeat: no-repeat; /* منع تكرار الصورة */
+  background-position: center; /* ضبط الصورة لتكون في المركز */
+
+}
 h1 {
     font-size: 2rem;
     margin-top: 20px;
                 color: #005f73;
+
+}h1.dark-mode {
+    font-size: 2rem;
+    margin-top: 20px;
+                color: #ffffff;
 
 }
 
@@ -42,6 +76,20 @@ h1 {
 
 .card {
     background-color: #ffffff;
+    border-radius: 15px;
+    padding: 5%; 
+    width: 90%; /* استخدم عرضًا نسبيًا */
+    max-width: 640px; 
+    min-width: 640px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.card.dark-mode {
+    background-color: #737374;
     border-radius: 15px;
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
@@ -70,7 +118,22 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+} 
+.card.dark-mode {
+    background-color: #737374;
+    border-radius: 15px;
+    padding: 5%; 
+    width: 90%; /* استخدم عرضًا نسبيًا */
+    max-width: 640px; 
+    min-width: 355px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
+
 .topics {
   display: flex;
   justify-content: space-evenly;
@@ -89,6 +152,10 @@ h1 {
     font-size: 2.5rem;
     color: #005f73;
 }
+.card i.dark-mode {
+    font-size: 2.5rem;
+    color: #fdfeff;
+}
 
 .card h3 {
     font-size: 1.5rem;
@@ -99,7 +166,14 @@ h1 {
 
     color: #005f73;
 }
-
+.card h3.dark-mode {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.card h4.dark-mode {
+    font-size: 2.5rem;
+    color: #fdfeff;
+}
 /* إذا كنت ترغب في إضافة بعض الهوامش بين البطاقات */
 .card + .card {
     margin-top: 20px; /* أو أي قيمة تفضلها */
@@ -418,6 +492,17 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+}.loader-wrapper.dark-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(185, 183, 183, 0.913); /* لون خلفية نصف شفافة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 .wrapper {
@@ -433,6 +518,15 @@ footer {
   position: absolute;
   border-radius: 50%;
   background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 .5s alternate infinite ease;
+}.circle.dark-mode {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #2f2f2f;
   left: 15%;
   transform-origin: 50%;
   animation: circle7124 .5s alternate infinite ease;
@@ -621,4 +715,48 @@ footer {
   box-shadow: 0px 0px var(--main-color);
   transform: translate(3px, 3px);  
 
+}
+header.dark-mode {
+    background-color: #4e4e4e;
+
+}
+.cardd {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 600px;
+        }
+.cardd.dark-mode {
+    background-color: #797676;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 600px;
+    color: #f9f9f9;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}.container.dark-mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #797676;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
