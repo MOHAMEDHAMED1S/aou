@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
     }, 600); // مدة التأخير 1 ثانية
 });
     const checkbox = document.querySelector('.input');
-    const elements = document.querySelectorAll('.button, .card, .card i, .card h3, h1, header, .cardd, .container, .loader-wrapper, .circle, .logo-link');
+    const elements = document.querySelectorAll('.button, .card, .card i, .card h3, h1, header, .cardd, .container, .loader-wrapper, .circle, .logo-link, .theme');
 
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
 

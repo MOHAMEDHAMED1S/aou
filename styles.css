@@ -675,6 +675,21 @@ footer {
   box-shadow: 4px 4px var(--main-color);  
 
   float: right;
+} .theme.dark-mode {
+  --bg-color: #fff;
+  --main-color: #696d6d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);  
+
+  float: right;
 }
 
 .input {
