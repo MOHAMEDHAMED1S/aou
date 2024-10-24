@@ -35,7 +35,14 @@
     </header>
 
     <main>
-
+      <div id="offline-message" style="display: none;">
+        <p>أنت غير متصل جرب اللعبة.</p>
+        <a class="Btnn" href="#" onclick="showGame()">اللعب الآن</a>
+    </div>
+    <div id="game-container">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
         <div class="search-container">
           <button class="search-button"><i class="fas fa-search"></i></button>
             <input type="text" class="search-input" id="searchInput" placeholder=" ...بحث عن جروب">

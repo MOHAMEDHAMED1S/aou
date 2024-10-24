@@ -35,22 +35,22 @@ header.dark-mode {
     max-width: 120px;
 }
 .logo-link {
-  display: block; /* لجعل العنصر قابل للنقر بالكامل */
-  width: 50px; /* عرض الشعار */
-  height: 50px; /* ارتفاع الشعار */
-  background-image: url('images/logo.png'); /* مسار الصورة */
-  background-size: contain; /* جعل الصورة تناسب حجم العنصر */
-  background-repeat: no-repeat; /* منع تكرار الصورة */
-  background-position: center; /* ضبط الصورة لتكون في المركز */
+  display: block; 
+  width: 50px; 
+  height: 50px; 
+  background-image: url('images/logo.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 
 }.logo-link.dark-mode {
-  display: block; /* لجعل العنصر قابل للنقر بالكامل */
-  width: 50px; /* عرض الشعار */
-  height: 50px; /* ارتفاع الشعار */
-  background-image: url('images/logo2.png'); /* مسار الصورة */
-  background-size: contain; /* جعل الصورة تناسب حجم العنصر */
-  background-repeat: no-repeat; /* منع تكرار الصورة */
-  background-position: center; /* ضبط الصورة لتكون في المركز */
+  display: block; 
+  width: 50px; 
+  height: 50px; 
+  background-image: url('images/logo2.png'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center; 
 
 }
 h1 {
@@ -150,7 +150,7 @@ h1 {
 
 .card i {
     font-size: 2.5rem;
-    color: #005f73;
+    color: #025566;
 }
 .card i.dark-mode {
     font-size: 2.5rem;
@@ -174,9 +174,8 @@ h1 {
     font-size: 2.5rem;
     color: #fdfeff;
 }
-/* إذا كنت ترغب في إضافة بعض الهوامش بين البطاقات */
 .card + .card {
-    margin-top: 20px; /* أو أي قيمة تفضلها */
+    margin-top: 20px; 
 }
 
 footer {
@@ -190,11 +189,11 @@ header {
     padding-bottom: 0px;
 
     background-color: #005f73;
-    padding: 10px; /* تم تقليل المسافة حول الشعار */
+    padding: 10px; 
 }
 
 .logo {
-    max-width: 80px; /* تم تقليل حجم الشعار */
+    max-width: 80px; 
 }
 * {
     margin: 0;
@@ -212,13 +211,13 @@ header {
     background-color: #ffffff;
     display: flex;
     position: relative;
-    overflow: hidden; /* لإخفاء العناصر خلال الأنيميشن */
+    overflow: hidden; 
 }
 
 .logo-container {
     opacity: 0;
     transform: translateX(100%);
-    animation: slide-in 1s ease-out forwards; /* أنيميشن سلس للشعار */
+    animation: slide-in 1s ease-out forwards; 
 }
 
 @keyframes slide-in {
@@ -233,7 +232,7 @@ header {
 }
 
 .logo {
-    max-width: 50px; /* حجم الشعار */
+    max-width: 50px; 
 }
 
 .card-container {
@@ -247,7 +246,7 @@ footer {
     color: white;
 }
 .card-link {
-  text-decoration: none;  /* إزالة الخط تحت النص */
+  text-decoration: none;  
 }
  .search-container {
             text-align: center;
@@ -255,7 +254,7 @@ footer {
         }
         .search-input {
             padding: 10px;
-            text-align: right; /* لجعل النص يظهر من اليمين */
+            text-align: right; 
             width: 250px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -480,14 +479,13 @@ footer {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
 }
-/* تغطية الشاشة بالـ loader */
 .loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(198, 196, 196, 0.913); /* لون خلفية نصف شفافة */
+  background-color: rgba(198, 196, 196, 0.913); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,7 +496,7 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(185, 183, 183, 0.913); /* لون خلفية نصف شفافة */
+  background-color: rgba(185, 183, 183, 0.913); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -599,7 +597,6 @@ footer {
   animation-delay: .3s;
 }
 
-/* إخفاء المحتوى أثناء تحميل الـ loader */
 #content {
   display: none;
 }
@@ -776,25 +773,88 @@ header.dark-mode {
     margin-bottom: 20px;
 }
 
-/* زر العودة إلى الأعلى */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: #d8d9da72; /* لون الخلفية */
-    color: #005f73; /* لون النص */
+    background-color: #d8d9da72;
+    color: #005f73; 
     padding: 10px 15px;
-    border-radius: 50%; /* جعل الزر دائري */
+    border-radius: 50%;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    z-index: 1000; /* لكي يكون فوق العناصر الأخرى */
+    z-index: 1000; 
     height: 60px;
     width: 60px;
 }
 
 .back-to-top:hover {
-    background-color: #d8d9dac6; /* تغيير اللون عند التمرير */
+    background-color: #d8d9dac6; 
     color: #005f73;
+}
+#offline-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #006073e9;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+  align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* تأثير سلس */
+
+}
+
+.Btnn {
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: #005f73;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #005f73;
+  transition-duration: .3s;
+}
+
+
+
+.Btnn:hover {
+  color: transparent;
+}
+
+
+
+.Btnn:active {
+  transform: translate(3px , 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+#game-container {
+  display: none; /* اجعلها مخفية بشكل افتراضي */
+
+
+  z-index: 1000; /* تأكد من أن العنصر فوق العناصر الأخرى */
+
+}
+
+.close-button {
+  position: absolute; /* موضع الزر داخل الحاوية */
+  top: 110px; /* المسافة من الأعلى */
+  right: 10px; /* المسافة من اليمين */
+  background-color: #005f73; /* لون الزر */
+  color: white; /* لون النص */
+  border: none; /* إزالة الحدود */
+  border-radius: 5px; /* زوايا مستديرة */
+  cursor: pointer; /* شكل المؤشر عند المرور فوق الزر */
+  padding: 2px 20px; /* مسافة داخلية للزر */
 }

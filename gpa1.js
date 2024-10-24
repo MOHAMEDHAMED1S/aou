@@ -95,7 +95,7 @@
 
                     const cumulativeGPA = totalGradePoints / totalHours;
                     document.querySelector("#cumulative-result .gpa-text").textContent = cumulativeGPA.toFixed(2);
-                    const gpaPercentage = Math.min(100, (cumulativeGPA * 25)); // Convert GPA to a maximum percentage of 100%
+                    const gpaPercentage = Math.min(100, (cumulativeGPA * 25)); 
                     document.querySelector("#cumulative-result .gpa-progress").style.width = `${gpaPercentage}%`;
                 };
 
@@ -122,12 +122,10 @@
             document.getElementById("myModal").style.display = "block";
         }
 
-        // Function to close the modal
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
 
-        // Close the modal when clicking outside of it
         window.onclick = function(event) {
             var modal = document.getElementById("myModal");
             if (event.target == modal) {

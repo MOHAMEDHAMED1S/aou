@@ -1,9 +1,19 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
 window.addEventListener("load", function() {
-    // إخفاء الـ loader بعد ثانية واحدة
     setTimeout(function() {
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
-    }, 600); // مدة التأخير 1 ثانية
+    }, 600); 
 });
     const checkbox = document.querySelector('.input');
     const elements = document.querySelectorAll('.button, .card, .card i, .card h3, h1, header, .cardd, .container, .loader-wrapper, .circle, .logo-link, .theme');
@@ -28,7 +38,6 @@ window.addEventListener("load", function() {
 
         localStorage.setItem('darkMode', isChecked);
     });
-    // عندما يقوم المستخدم بالتمرير 100px من الأعلى، يظهر الزر
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -39,9 +48,33 @@ function scrollFunction() {
         backToTopButton.style.display = "none";
     }
 }
-
-// عند الضغط على الزر، يرجع المستخدم إلى أعلى الصفحة
 document.querySelector('.back-to-top').addEventListener('click', function(event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+function updateOnlineStatus() {
+    const offlineMessage = document.getElementById('offline-message');
+    if (navigator.onLine) {
+        offlineMessage.style.display = 'none';
+    } else {
+        offlineMessage.style.display = 'block';
+    }
+}
+
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+updateOnlineStatus();
+
+function reloadPage() {
+    location.reload();
+}
+
+
+function showGame() {
+    document.getElementById('game-container').style.display = 'block';
+    document.getElementById('offline-message').style.display = 'none';
+}
+function closeGame() {
+        document.getElementById('game-container').style.display = 'none';
+    }

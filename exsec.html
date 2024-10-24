@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <style>
-    section{
-        background-color: white;
-    }
+    body.dark-mode {background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px);background-size: 34px 34px;background-color: #454646;color: #000000;text-align: center;}
+
 </style>
 </head>
     <div id="loader" class="loader-wrapper">
@@ -24,7 +23,14 @@
         <div class="shadow"></div>
     </div>
 </div><a href="#" class="back-to-top"><i class="fa-solid fa-angles-up fa-bounce"></i></a>
-
+<div id="offline-message" style="display: none;">
+    <p>أنت غير متصل جرب اللعبة.</p>
+    <a class="Btnn" href="#" onclick="showGame()">اللعب الآن</a>
+</div>
+<div id="game-container">
+    <button class="close-button" onclick="closeGame()">×</button>
+    <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
+</div>
 <body>
     <header>
        <div class="logo-container">

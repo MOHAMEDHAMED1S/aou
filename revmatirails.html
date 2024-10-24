@@ -330,7 +330,14 @@ background-size: 34px 34px;
        <div> <h1>.... قيد التطوير </h1></div>
 
     <main>
-
+      <div id="offline-message" style="display: none;">
+        <p>أنت غير متصل جرب اللعبة.</p>
+        <a class="Btnn" href="#" onclick="showGame()">اللعب الآن</a>
+    </div>
+    <div id="game-container">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
 <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
 	<div class="wheel"></div>
 	<div class="hamster">
