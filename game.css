@@ -92,6 +92,8 @@ body {
     border-radius: 8px;
     font-size: 2vw; /* استخدام وحدة vw */
     text-align: center;
+    z-index: 1001; 
+
 }
 
 #scoreboard {
@@ -120,4 +122,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.5vw; /* استخدام وحدة vw */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* لون الطبقة وشفافيتها */
+    z-index: 1000; 
 }
