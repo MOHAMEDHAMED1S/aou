@@ -152,6 +152,10 @@ h1 {
     font-size: 2.5rem;
     color: #025566;
 }
+i .fa-solid + fa-file-arrow-up{
+  font-size: 1.5rem;
+
+}
 .card i.dark-mode {
     font-size: 2.5rem;
     color: #fdfeff;
@@ -160,6 +164,9 @@ h1 {
 .card h3 {
     font-size: 1.5rem;
     color: #005f73;
+}
+.card h6 {
+  color: #005f73;
 }
 .card h4 {
         font-size: 1.3rem;
