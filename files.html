@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <style>
-  
+  @media (max-width: 600px) {
+    .card h3 {
+      font-size: smaller;
+    }
+  }
   </style>
 </head>
     <div id="loader" class="loader-wrapper">
@@ -110,7 +114,8 @@ searchInput.addEventListener('input', function() {
         fileList.innerHTML = "";
 
         files.forEach(file => {
-          const fileElement = document.createElement("div");
+          const fileElement = document.createElement("a");
+          fileElement.href =  `${file.link}`;
           fileElement.className = "card-link";
           fileElement.innerHTML = `<div class="card"  style="
     margin-bottom: 15px;
