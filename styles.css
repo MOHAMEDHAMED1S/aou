@@ -865,3 +865,16 @@ header.dark-mode {
   cursor: pointer; /* شكل المؤشر عند المرور فوق الزر */
   padding: 2px 20px; /* مسافة داخلية للزر */
 }
+body.dark-mode .card {
+  background-color: #737374; /* لون الكارد في الدارك مود */
+  color: #ffffff;
+}
+body.dark-mode .card h3 {
+  color: #ffffff;
+}
+body.dark-mode .card i {
+  color: #ffffff;
+}
+body.dark-mode .card h6 {
+  color: #ffffff;
+}
