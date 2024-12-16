@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <style>
-  @media (max-width: 600px) {
-    .card h3 {
-      font-size: smaller;
-    }
-  }
+  .card h3  {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+    line-height: 1.4; 
+    text-align: center; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    direction: rtl; 
+}
+
   </style>
 </head>
     <div id="loader" class="loader-wrapper">

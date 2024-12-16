@@ -871,10 +871,26 @@ body.dark-mode .card {
 }
 body.dark-mode .card h3 {
   color: #ffffff;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.4; 
+  text-align: center; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  direction: rtl; 
 }
 body.dark-mode .card i {
   color: #ffffff;
 }
 body.dark-mode .card h6 {
   color: #ffffff;
+}
+.card h3  {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.4; 
+  text-align: center; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  direction: rtl; 
 }
