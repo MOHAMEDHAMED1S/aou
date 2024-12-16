@@ -167,6 +167,7 @@ i .fa-solid + fa-file-arrow-up{
 }
 .card h6 {
   color: #005f73;
+  font-size: 1em;
 }
 .card h4 {
         font-size: 1.3rem;
