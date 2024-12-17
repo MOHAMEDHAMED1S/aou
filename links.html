@@ -311,53 +311,58 @@ background-size: 34px 34px;
     margin-top: 20px;
     color: #ffffff;
 }
-.card-container {
-  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
         }
         .card {
-          border-radius: 100px;
+            border-radius: 100px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             padding: 20px;
             display: flex;
             align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
+            text-align: center;
+            justify-content: center;
+        }
         .card img {
             max-width: 100%;
             height: auto;
         }
-        a{
-          display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.card p {
-color: #025566;
-}
-.card.dark-mode p  {
-color: #ffffff;
-}
-.card.dark-mode {
-  border-radius: 100px;
+        a {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card p {
+            color: #025566;
+        }
+        .card.dark-mode p {
+            color: #ffffff;
+        }
+        .card.dark-mode {
+            border-radius: 100px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             padding: 20px;
             display: flex;
             align-items: center;
-    text-align: center;
-    justify-content: center;
+            text-align: center;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
 
-}
         </style>
 </head>
 
