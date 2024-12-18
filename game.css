@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f000;
+    overflow: hidden;
+}
+
+#game {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    background-color: #96d5ee;
+    overflow: hidden;
+    border-radius: 8px; /* زوايا مستديرة */
+
+}
+
+#sky {
+    width: 200%;
+    height: 40%;
+    background: url('logo.png') repeat-x;
+    background-size: 150px 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveClouds 40s linear infinite;
+}
+
+@keyframes moveClouds {
+    from { left: 0; }
+    to { left: -100%; }
+}
+
+#ground {
+    width: 100%;
+    height: 5vh; /* استخدام وحدة vh */
+    background-color: #567e6749;
+    position: absolute;
+    bottom: 0;
+}
+
+#player {
+    width: 5vw; /* استخدام وحدة vw */
+    height: 5vw; /* استخدام وحدة vw للحفاظ على النسبة */
+    position: absolute;
+    bottom: 8vh; /* استخدام وحدة vh */
+    left: 5vw; /* استخدام وحدة vw */
+    
+}
+
+#obstacle {
+    width: 7vw; /* استخدام وحدة vw */
+    height: 5vw; /* استخدام وحدة vw */
+    background: linear-gradient(145deg, #3ca0e7, #1e7aa8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw; 
+    font-weight: bold;
+    color: #f0f0f0;
+    position: absolute;
+    right: -10%; /* استخدام نسبة مئوية */
+    bottom: 0;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    animation: moveObstacle 3s linear infinite;
+}
+
+@keyframes moveObstacle {
+    from { right: -10%; }
+    to { right: 100%; }
+}
+
+#message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2vh 3vw; /* استخدام وحدات vh و vw */
+    border-radius: 8px;
+    font-size: 2vw; /* استخدام وحدة vw */
+    text-align: center;
+    z-index: 1001; 
+
+}
+
+#scoreboard {
+    position: absolute;
+    top: 2vh; /* استخدام وحدة vh */
+    left: 2vw; /* استخدام وحدة vw */
+    color: white;
+    font-size: 3vw; /* استخدام وحدة vw */
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1vh 2vw; /* استخدام وحدات vh و vw */
+}
+
+#current-score, #high-score {
+    margin-right: 5px;
+}
+
+#restart-btn {
+    margin-top: 2vh; /* استخدام وحدة vh */
+    padding: 1vh 2vw; /* استخدام وحدات vh و vw */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5vw; /* استخدام وحدة vw */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* لون الطبقة وشفافيتها */
+    z-index: 1000; 
+}
