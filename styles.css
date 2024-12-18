@@ -895,3 +895,14 @@ body.dark-mode .card h6 {
   text-overflow: ellipsis; 
   direction: rtl; 
 }
+.con1 {
+  padding-bottom: 200px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:auto; 
+
+}
