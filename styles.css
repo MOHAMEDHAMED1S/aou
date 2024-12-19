@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
     text-decoration: none; 
-    
+    overflow-x: hidden; 
 }
 
 body {
@@ -207,12 +208,6 @@ header {
 
 .logo {
     max-width: 80px; 
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
 }
 
 body {
@@ -911,7 +906,20 @@ body.dark-mode .card h6 {
   height:auto; 
 
 }
-#flo p{
-  margin-left: 1.5em;
+#flo h3{
 
+  font-family: "Scheherazade New", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#flo a{
+
+color: #025566;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#flo p{
+  margin-right: -2.5rem;
 }
