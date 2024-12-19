@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
     }, 600); 
 });
     const checkbox = document.querySelector('.input');
-    const elements = document.querySelectorAll('.button, .card, .card i,#name, .card h3, h1, header,.head, .card, .container, .loader-wrapper, .circle, .logo-link, .theme');
+    const elements = document.querySelectorAll('.button,#flo a, .card, .card i,#name, .card h3, h1, header,.head, .card, .container, .loader-wrapper, .circle, .logo-link, .theme');
 
     const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
 
