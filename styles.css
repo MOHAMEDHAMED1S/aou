@@ -876,7 +876,7 @@ body.dark-mode .card h3 {
   line-height: 1.4; 
   text-align: center; 
   white-space: nowrap; 
-  overflow: hidden; 
+
   text-overflow: ellipsis; 
   direction: rtl; 
 }
@@ -891,7 +891,7 @@ body.dark-mode .card h6 {
   line-height: 1.4; 
   text-align: center; 
   white-space: nowrap; 
-  overflow: hidden; 
+ 
   text-overflow: ellipsis; 
   direction: rtl; 
 }
@@ -928,4 +928,10 @@ color: #025566;
 #flo p{
   margin-right: -2.5rem;
 
+}
+.card-link {
+  pointer-events: none;
+}
+.card-link img {
+  pointer-events: auto;
 }
