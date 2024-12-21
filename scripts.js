@@ -78,21 +78,3 @@ function showGame() {
 function closeGame() {
         document.getElementById('game-container').style.display = 'none';
     }
-    const cards = document.querySelectorAll('.card-link');
-    cards.forEach(card => {
-        card.addEventListener('touchmove', function(e) {
-            e.stopPropagation(); // السماح بالتمرير الطبيعي
-        });
-    });
-    const images = document.querySelectorAll('img');
-images.forEach(img => {
-    img.setAttribute('draggable', 'false');
-});
-const links = document.querySelectorAll('.card-link');
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        if (e.cancelable) {
-            e.preventDefault();
-        }
-    });
-});
