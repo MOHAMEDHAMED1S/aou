@@ -5,7 +5,7 @@ function doGet(e) {
   function doPost(e) {
     return handleRequest(e);
   }
-  var folderr = "1bybfRm1gGpgSopScFTlxe9H6KF8L9Vi5"
+  var folderr = ""
   function handleRequest(e) {
     if (e.method === "OPTIONS") {
       return HtmlService.createHtmlOutput("")
