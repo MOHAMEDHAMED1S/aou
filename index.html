@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aou Help </title>
+    <title>aou help </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
-    <meta name="description" content="Aou Help
-موقع شامل لطلاب الجامعة العربيه المفتوحة يوفر مراجعات المواد الدراسية، جروبات واتساب للمواد والتخصصات، قسم للمساعدة ، حاسبة GPA، وروابط مهمة للجامعة. منصة مثالية لدعم الطلاب وتحسين تجربتهم التعليمية." />
+    <meta name="description" content="موقع شامل لطلاب الجامعة العربيه المفتوحة يوفر مراجعات المواد الدراسية، جروبات واتساب للمواد والتخصصات، قسم للمساعدة ، حاسبة GPA، وروابط مهمة للجامعة. منصة مثالية لدعم الطلاب وتحسين تجربتهم التعليمية." />
     <meta property="og:image" content="https://aou-help.netlify.app/images/photo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:title" content="موقع للطلاب - المراجعات، جروبات الواتساب، الحاسبة، والمزيد" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-</head>
+<style>
+    .card{
+        max-width: 840px; 
+        min-width: 730px; 
+    }
+    .card.dark-mode{
+        max-width: 840px; 
+        min-width: 730px; 
+    }
+@media (max-width: 600px) {
+  .card {
+    max-width: 640px; 
+    min-width: 330px; 
+}
+.card.dark-mode{
+    max-width: 640px; 
+    min-width: 330px; 
+    }
 
+}
+</style>
+</head>
 <body>
     <div id="loader" class="loader-wrapper">
     <div class="wrapper">
@@ -50,16 +69,32 @@
         <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
     </div>
     <main>
-        <h1>قائمة المساعدة</h1>
-        <div class="card-container">
-            <a href="mat.html" class="card-link">
+
+            <img src="images/Education-pana.svg" alt="" style="
+width: 275px;
+
+        justify-items: center;
+        display: inline;
+
+">
+        <div class="card-container" style="
+        padding-top: 0px;
+    " >
+           
+           <a href="mat.html" class="card-link">
             <div class="card">
                 <i class="fas fa-book"></i>
-                <h3>مراجعات المواد الدراسيه</h3>
+                <h3> مراجعات المواد الدراسيه</h3>
+            </div></a> 
+           <a href="Colleges.html" class="card-link">
+            <div class="card">
+                <i class="fas fa-book"></i>
+                <h3>(beta) الكليات </h3>
             </div></a>
+
             <a href="whgroubs.html" class="card-link">
             <div class="card" >
-                <i class="fab fa-whatsapp"></i>    
+                <i class="fab fa-whatsapp"></i>
                 <h3>جروبات واتساب المواد</h3>
             </div>  </a>
             <a href="exsec.html" class="card-link">
@@ -90,7 +125,11 @@
         <a id="btt"></a>
 
     </main>
-
+    
+<div id="flo" >
+    <h3>تطوير</h3>
+<p><a href="https://www.facebook.com/ziad.74.72">Ziad Ayman</a>  |  <a href="https://www.facebook.com/profile.php?id=100070077043629">Mohamed Hamed</a></p>
+</div>
     <script src="scripts.js"></script>
 
 </body>

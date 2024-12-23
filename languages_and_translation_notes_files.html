@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  المستندات والمراجعات</title>
+    <title id="title"> جاري التحميل </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://script.google.com/macros/s/AKfycbzyAI47Fg4V5L49OOxL9VZ_uCJNv1ngky6Wq-VCAdfdMCtwAQ4fstxkeJDlc86dsdkngQ/exec" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <style>
-h3{
-  font-size: 50%;
+  .card h3  {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+    line-height: 1.4; 
+    text-align: center; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    direction: rtl; 
 }
-</style>
+
+  </style>
 </head>
     <div id="loader" class="loader-wrapper">
     <div class="wrapper">
@@ -47,27 +54,23 @@ h3{
         <button class="close-button" onclick="closeGame()">×</button>
         <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
     </div>
-
         <div class="search-container">
           <button class="search-button"><i class="fas fa-search"></i></button>
-            <input type="text" class="search-input" id="searchInput" placeholder=" ...بحث عن مادة">
+            <input type="text" class="search-input" id="searchInput" placeholder=" ...بحث عن ملف ">
             
         </div>
-            <div>
-      <img style="width: 100%;height: 100px;;" src="images/Reading glasses-cuate.svg" alt="">
-    </div>
+        <h4>:اذا اردت المساعدة </h4>
+
         <div class="card-container" id="cardContainer">
-
-
           <a href="https://script.google.com/macros/s/AKfycbytG2zf06IPO6CjI2O9vLr_RCzc2Wmm-buJPAXlc6tulgp4rHGs87L9KqiovaW7c1A/exec" class="card-link">
-            <div class="card">
+            <div class="card" style="margin-top: -30px; ">
               <i class="fa-solid fa-file-arrow-up" style="font-size: 1.5rem;"></i>
-                            <h6>ساعدنا في إضافة ملفات أو مواد غير موجودة </h6>
+                            <h6>اضغط هنا لرفع المزيد من الملفات للموقع</h6>
             </div>
           </a>
-          <h3>: المواد المتوفرة </h3>
+          <h3>: الملفات  </h3>
 
-          <div id="subjectsList">        <h1> ....انتظر من فضلك يتم تحميل المواد </h1>
+          <div id="fileList">        <h1> ....انتظر من فضلك يتم تحميل الملفات </h1>
           </div>
 
 
@@ -78,7 +81,7 @@ h3{
     </main></body>
 <script>
 const searchInput = document.getElementById('searchInput');
-const cardContainer = document.getElementById('subjectsList');
+const cardContainer = document.getElementById('fileList');
 
 searchInput.addEventListener('input', function() {
     const filter = searchInput.value.toLowerCase()
@@ -102,43 +105,41 @@ searchInput.addEventListener('input', function() {
 </script>
 
 <script>
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbylhyCi-UYjoL5XXunaMPMoF2pSHgn1AbEU78q7fgRPqP61GSGBAsj3KNqO8SNzVGY9/exec"; 
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbzAmOf3tyiVw3KNZFJEuFK-r8Iyshq462HWXIzr4rEUyp-fVw4biG7rdk_IUDhEWGrS/exec"; 
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get('subject');
 
-  async function loadSubjects() {
+    async function loadFiles() {
+      try {
+        const response = await fetch(scriptUrl + "?action=getFiles&subject=" + subject);
+        const files = await response.json();
+        const fileList = document.getElementById("fileList");
+        const title = document.getElementById("title");
+        title.innerText = `${subject} الملفات الخاصه ب`
+        fileList.innerHTML = "";
 
-  try {
-    const response = await fetch(scriptUrl + "?action=getSubjects");
-    const subjects = await response.json();
-    const subjectsList = document.getElementById("subjectsList");
-    subjectsList.innerHTML = "";
-
-    subjects.forEach(subject => {
-      const subjectElement = document.createElement("a");
-      subjectElement.className = "card-link";
-      subjectElement.href = `files.html?subject=${subject}`;
-      subjectElement.innerHTML = `
-        <div class="card" style="
+        files.forEach(file => {
+          const fileElement = document.createElement("a");
+          fileElement.href =  `${file.link}`;
+          fileElement.className = "card-link";
+          fileElement.innerHTML = `<div class="card"  style="
     margin-bottom: 15px;
 ">
 <i class="fa-solid fa-book"></i>
-          <h3>${subject}</h3>
-        </div> 
-      `;
-      subjectElement.onclick = function() {
-        window.location.href = `files.html?subject=${subject}`;
-      };
+          <h3>${file.name}</h3>
+        </div> `;
+        fileElement.onclick = function() {
+        window.location.href = `${file.link}`;
+      
+        };
+          fileList.appendChild(fileElement);
+        });
+      } catch (error) {
+        alert("حدث خطأ أثناء تحميل الملفات. " );
+      }
+    }
 
-      subjectsList.appendChild(subjectElement);
-    });
-  } catch (error) {
-    alert("حدث خطأ أثناء تحميل المواد الدراسية " );
-  } finally {
-    document.getElementById("loader").style.display = "none";
-  }
-}
-
-
-  loadSubjects();
+    loadFiles();
 </script>
     <script src="scripts.js"></script>
 

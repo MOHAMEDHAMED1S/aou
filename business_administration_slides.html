@@ -102,7 +102,7 @@ searchInput.addEventListener('input', function() {
 </script>
 
 <script>
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbylhyCi-UYjoL5XXunaMPMoF2pSHgn1AbEU78q7fgRPqP61GSGBAsj3KNqO8SNzVGY9/exec"; 
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbyEApovpOE8O7bxQ0bCOA6DKm94kuzI4doOocOQM3Pu94mgf6ogEliWrHYlaU0axgLT/exec"; 
 
   async function loadSubjects() {
 
@@ -115,7 +115,7 @@ searchInput.addEventListener('input', function() {
     subjects.forEach(subject => {
       const subjectElement = document.createElement("a");
       subjectElement.className = "card-link";
-      subjectElement.href = `files.html?subject=${subject}`;
+      subjectElement.href = `business_administration_slides_files.html?subject=${subject}`;
       subjectElement.innerHTML = `
         <div class="card" style="
     margin-bottom: 15px;
@@ -125,7 +125,7 @@ searchInput.addEventListener('input', function() {
         </div> 
       `;
       subjectElement.onclick = function() {
-        window.location.href = `files.html?subject=${subject}`;
+        window.location.href = `business_administration_slides_files.html?subject=${subject}`;
       };
 
       subjectsList.appendChild(subjectElement);

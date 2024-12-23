@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
     text-decoration: none; 
-    
+    overflow-x: hidden; 
 }
 
 body {
@@ -79,8 +80,8 @@ h1 {
     border-radius: 15px;
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
-    max-width: 640px; 
-    min-width: 640px; 
+    max-width: 540px; 
+    min-width: 430px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -93,8 +94,8 @@ h1 {
     border-radius: 15px;
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
-    max-width: 640px; 
-    min-width: 640px; 
+    max-width: 540px; 
+    min-width: 430px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -111,7 +112,7 @@ h1 {
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
     max-width: 640px; 
-    min-width: 355px; 
+    min-width: 330px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,13 +120,18 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 } 
+.con1 img {
+  border-radius: 10px 10px 0 0;
+  height: 18em;
+  width: 18em;
+}
 .card.dark-mode {
     background-color: #737374;
     border-radius: 15px;
     padding: 5%; 
     width: 90%; /* استخدم عرضًا نسبيًا */
     max-width: 640px; 
-    min-width: 355px; 
+    min-width: 330px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -202,12 +208,6 @@ header {
 
 .logo {
     max-width: 80px; 
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
 }
 
 body {
@@ -894,4 +894,41 @@ body.dark-mode .card h6 {
   overflow: hidden; 
   text-overflow: ellipsis; 
   direction: rtl; 
+}
+.con1 {
+  padding-bottom: 200px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:auto; 
+
+}
+#flo h3{
+
+  font-family: "Scheherazade New", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#flo a{
+
+color: #025566;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#flo a.dark-mode{
+
+  color: #ffffff;
+
+  }
+#flo p{
+  margin-right: -2.5rem;
+  margin-bottom: 2em;
+}
+body {
+  overflow: hidden; /* تعطيل التمرير العالمي إذا كنت تريد فقط تمرير عنصر محدد */
 }
