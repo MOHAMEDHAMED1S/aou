@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recorded lectures aou</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<style>.card {
+  margin-bottom: 10px;
+}</style>
+</head>
+    <div id="loader" class="loader-wrapper">
+    <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+<body>
+    <header>
+<div class="logo-container">
+  <a href="index.html" class="logo-link">
+  </a>
+</div>
+<a href="#" class="back-to-top"><i class="fa-solid fa-angles-up fa-bounce"></i></a>
+<label class="theme">
+  <input class="input" checked="checked" type="checkbox">
+  <svg width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="icon icon-sun"><circle r="5" cy="12" cx="12"></circle><line y2="3" y1="1" x2="12" x1="12"></line><line y2="23" y1="21" x2="12" x1="12"></line><line y2="5.64" y1="4.22" x2="5.64" x1="4.22"></line><line y2="19.78" y1="18.36" x2="19.78" x1="18.36"></line><line y2="12" y1="12" x2="3" x1="1"></line><line y2="12" y1="12" x2="23" x1="21"></line><line y2="18.36" y1="19.78" x2="5.64" x1="4.22"></line><line y2="4.22" y1="5.64" x2="19.78" x1="18.36"></line></svg>
+  <svg viewBox="0 0 24 24" class="icon icon-moon"><path d="m12.3 4.9c.4-.2.6-.7.5-1.1s-.6-.8-1.1-.8c-4.9.1-8.7 4.1-8.7 9 0 5 4 9 9 9 3.8 0 7.1-2.4 8.4-5.9.2-.4 0-.9-.4-1.2s-.9-.2-1.2.1c-1 .9-2.3 1.4-3.7 1.4-3.1 0-5.7-2.5-5.7-5.7 0-1.9 1.1-3.8 2.9-4.8zm2.8 12.5c.5 0 1 0 1.4-.1-1.2 1.1-2.8 1.7-4.5 1.7-3.9 0-7-3.1-7-7 0-2.5 1.4-4.8 3.5-6-.7 1.1-1 2.4-1 3.8-.1 4.2 3.4 7.6 7.6 7.6z"></path></svg>
+</label>
+    </header>
+
+    <main>
+      <div id="offline-message" style="display: none;">
+        <p>أنت غير متصل جرب اللعبة.</p>
+        <a class="Btnn" href="#" onclick="showGame()">اللعب الآن</a>
+    </div>
+    <div id="game-container">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <iframe src="game.html" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+        <div class="search-container">
+          <button class="search-button"><i class="fas fa-search"></i></button>
+            <input type="text" class="search-input" id="searchInput" placeholder=" ...بحث عن جروب">
+            
+        </div>
+        <div class="card-container" id="cardContainer">
+
+  
+        <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/Evd_CDgKnX_SBDrDJfQeu10BxBzboba2HEs_4LsO83K1Sw?e=bU4LTt">
+          <div class="card">
+            <i class="fa-solid fa-clapperboard"></i>
+            <h3>Graphic Recording - Second 2020-2021</h3>
+          </div>
+      </a>
+        <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/Elv75KtIIGkYH54nJlY-cLoBW-wnEpjnLtXwEqsL7p1fWA?e=6kt5Cx">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>Graphic courses summer 2019-2020</h3>
+            </div>
+        </a>
+      
+      <a href="https://aoumasr-my.sharepoint.com/:f:/g/personal/lecures_aoumasr_onmicrosoft_com/EuaXzX4RJNFLl2ZHcRx9G3YBovemJjUyVL14tbcbcMXF9Q?e=lMxaQK">
+           
+        <div class="card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>Graphic Recording - Summer 2020-2021</h3>
+        </div>
+    </a>
+  
+
+      <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/Eo50tijjTyMu0BjWvWZ_uSoBcAcJAXR80tA7RKhtcHJ1Dg?e=k06TDr">
+        <div class="card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>General recording- Fall 2020-2021</h3>
+        </div>
+    </a>
+
+    <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/Eng10RsSDmaK_fc8SRx9x00BfvWvA3TexyDEVvLkcXNjZw?e=jGLPnY">
+        <div class="card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>General recording- Second2020-2021</h3>
+        </div>
+    </a>
+
+
+
+    <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/EuazqipiK9rBaBOuL0DyR3wBh2pawZcRICFsYIUHoOT9uw?e=BsKSIL">
+        <div class="card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>General recording- Summer2020-2021</h3>
+        </div>
+    </a>
+
+
+
+ <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/EmgAIiSpKjYNxQ5wWHNuFXgB6FlrbMMeOQcZeQTDgnmiCw?e=82daEX">
+        <div class="card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>General courses summer 2019-2020</h3>
+        </div>
+    </a>
+
+
+
+
+    <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/EvnsYGoIN7jqhGNOlIutJD4BDb5fgOff2_HYqYxQo02EfQ?e=HnJjSJ">
+      <div class="card">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>English recording- Fall 2020-2021</h3>
+      </div>
+  </a>
+
+
+  <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/Eip-Pt0nmJPwLLhEwF-ViNMBrKDksTns49FS-VrdUwjPiQ?e=9INA5e">
+      <div class="card">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>English recording-Second 2020-2021</h3>
+      </div>
+  </a>
+
+
+
+  <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/EjdPG3OSrNZNvE074Gl_eIoBc0jou4XTUYJYdQLW2s-MNQ?e=OewcoX">
+      <div class="card">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>English courses summer 2019-2020</h3>
+      </div>
+  </a>
+
+
+  <a href="https://arabou-my.sharepoint.com/:f:/g/personal/lecures_aou_edu_eg/EthL-E1d-z2VwIkNEZwJkw8BLvI7qZmrWkkoIx6Y2J_cCA?e=ytN0ji">
+      <div class="card">
+        <i class="fa-solid fa-clapperboard"></i>
+        <h3>English recording- Summer2020-2021</h3>
+      </div>
+  </a>
+
+
+          <a href="https://arabou.sharepoint.com/:f:/s/AR113Fall2024-2025/ElK7xL2-aHRLrdhGIISsUroBzd1iMg-YLAODIPXHPXoQvQ?e=cwbLnW">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>AR113 Dr. Abd Elmoety</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+            <a href="https://arabou.sharepoint.com/:f:/s/AR113fall2024-2025642/EqHrw8FE1VhHl1HQ8UtLFFsBQFBhHNXqys67OfhXJ2LGVQ?e=FGDWBD" target="_blank" rel="noreferrer noopener">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>AR113 Dr. Fatma Elesedy</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+             
+        
+        
+        
+        
+        
+ 
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+             <a href="https://arabou.sharepoint.com/:f:/s/AR113fall2024-2025496/Ej4EU02_p8NGrQyfu0vuZsYBocFPa0Y3ClQMT_T9IK48SQ?e=K3lHUe">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>AR113 Dr. Ehab Abdl-Salam</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/GR101Fall2024-2025/Ei2w1N0GxMJLscAXVPIOZyYBjTwLb7iQeFw3Y3tGJQWEWQ?e=HOjBcE">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR101 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/Gr111Fall2024-2025/Eu-gUx8o589Bgn4lkAERf0EB_wNAyhIMjRUGOBWiVbUqMw?e=ZgzdYO">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR111 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/Gr118Fall2024-2025715/EqUmzswmfDxDidaFVOIZMoUBlKMApZ-plDpzi3mH1llZ-w?e=IXv79A">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR118 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/GR131fall2024-2025329/EgfQ1cuUNLBItGKg5MJ19pkB8v9HhVI3BdygnyCfsDWB7w?e=ebYvkC">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR131 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/GR118Fall2024-2025225/ElkUiKB_hSVLiEuNSV2CEVwBWiPcVWSovND0H_29gqTeSg?e=veIWYV">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR118 Dr. Hanan Hafez</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        
+           
+        
+        
+        
+        
+        
+          <a href="https://arabou.sharepoint.com/:f:/s/GB101fall2024-2025/Et2zAy00X6dOhcWjj9IB0usBYjqLVKQeGXEkPj8GwXd47A?e=O978qO" target="_blank" rel="noreferrer noopener">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GB102 Dr. Nesma</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+           <a href="https://arabou.sharepoint.com/:f:/s/GT101-fall2024-2025/EoW_YND0qUJLhrDTtlHuk7MBDAXOReq3FdRf7pKasWZ3XA?e=nHTeBe" target="_blank" rel="noreferrer noopener">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GT101 Dr. Amna</h3>
+            </div>
+        </a>
+        
+        
+        
+        
+        
+        <h3><a href="https://arabou.sharepoint.com/:f:/s/GR118fall2024-2025/ErtFAK2NnUFMhtQbJ_BgpfIBsIQCELoeMEbxqLPGLMD4FQ?e=5GI2ah" style="background-color:rgb(255,255,255);font-size:1.64062rem;">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR118 Dr. Dina Gamal</h3>
+            </div>
+        </a>  
+        
+        
+        
+        
+ 
+                <a href="https://arabou.sharepoint.com/:f:/s/GR112fall2024-2024/Ep4ww9L80vFKmgQsU-n_ma4BZFmOdF4JJvo58CqgntnX7A?e=DftUcU" target="_blank" rel="noreferrer noopener">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR112 Dr. Dina Gamal</h3>
+            </div>
+        </a>
+
+            <a href="https://arabou.sharepoint.com/:f:/s/GR101-Summer2023-2024/Es5Qg6tARE9MjWKwm5FjceIBtX6narey3MaBSmTD8wKFSA?e=6FE6ru">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR101 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+        
+            <a href="https://arabou.sharepoint.com/:f:/s/GR118-Summer2023-2024/EmOXfym4NIROqH4sWY7GBX4BUXb-DtqjBQBWOTEdi4Eyqg?e=FEh0OD">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR118 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+            <a href="https://arabou.sharepoint.com/:f:/s/GR131-Summer2023-2024/Egi3hGp2nn5KjJtcgkLwyGIBpix4JN2cCh_eJUOCoBuF9A?e=Gm6nuo">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GR131 Dr. Samah Elsherif</h3>
+            </div>
+        </a>
+        
+ 
+            <a href="https://arabou.sharepoint.com/sites/GT101Second2023-2024/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGT101Second2023-2024%2FShared%20Documents%2FGeneral%2FRecrodings&amp;p=true&amp;ga=1">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GT101 Dr. Amna</h3>
+            </div>
+        </a>
+        
+ 
+
+        <a href="https://arabou.sharepoint.com/:f:/s/GT101Second2023-2024/EjjyvAaNHeNDhFQTSMIyh8kBHpGcCgTjVTuTMNaaK7K67Q?e=PS940F">
+            <div class="card">
+              <i class="fa-solid fa-clapperboard"></i>
+              <h3>GT101 Dr. Amna</h3>
+            </div>
+        </a>
+
+
+
+
+   
+
+          
+    </main></body>
+<script>
+const searchInput = document.getElementById('searchInput');
+const cardContainer = document.getElementById('cardContainer');
+
+searchInput.addEventListener('input', function() {
+    const filter = searchInput.value.toLowerCase()
+        .replace(/[^a-z0-9أ-ي]/g, '') 
+        .replace(/\s+/g, ''); 
+    const cards = cardContainer.getElementsByClassName('card-link');
+
+    Array.from(cards).forEach(function(card) {
+        const cardTitle = card.querySelector('h3').textContent.toLowerCase()
+            .replace(/[^a-z0-9أ-ي]/g, '') 
+            .replace(/\s+/g, ''); 
+        if (cardTitle.includes(filter) && cardTitle !== '0') {
+            card.style.display = ''; 
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});</script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
