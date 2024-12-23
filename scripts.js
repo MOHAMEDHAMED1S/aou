@@ -7,6 +7,7 @@ if ('serviceWorker' in navigator) {
             .catch((error) => {
                 console.error('Service Worker registration failed:', error);
             });
+            
     });
 }
 window.addEventListener("load", function() {
