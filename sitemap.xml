@@ -4,42 +4,238 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://aou-help.netlify.app/</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://aou-help.netlify.app/colleges</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://aou-help.netlify.app/whgroubs</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aou-help.netlify.app/exsec</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/emailgen</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aou-help.netlify.app/gpacalc</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aou-help.netlify.app/links</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aou-help.netlify.app/help</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://aou-help.netlify.app/gpacalc1</loc>
-  <lastmod>2024-10-11T20:42:27+00:00</lastmod>
+  <loc>https://aou-help.netlify.app/game.html</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business%20administration</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages%20%E2%80%8B%E2%80%8Band%20translation</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/gpacalc1</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer_science_slides</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer_science_notes</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer_science_mid</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer_science_final</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/computer_science_recorded</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business_administration_slides</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business_administration_notes</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business_administration_mid</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business_administration_final</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/business_administration_recorded</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media%20slides.html</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media%20notes.html</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media%20midterm</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media%20final.html</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/media%20lectures.html</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages_and_translation_slides</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages_and_translation_notes</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages_and_translation_mid</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages_and_translation_final</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/languages_and_translation_recorded</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design%20slides</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design%20notes</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design%20midterm</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design%20final</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/graphic%20design%20lectures</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education%20slides</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education%20notes</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education%20midterm</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education%20final</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://aou-help.netlify.app/education%20lectures</loc>
+  <lastmod>2024-12-23T18:20:21+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 
