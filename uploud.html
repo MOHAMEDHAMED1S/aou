@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>رفع مستندات ومراجعات المواد </title>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #1c1c1c;
+        color: #e0ead2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;  
+        align-items: center; 
+      }
+      .container {
+        max-width: 700px;
+        width: 100%;
+        background-color: #2b2b2b;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    justify-content: center;  
+    align-items: center;
+    text-align: right;
+      }
+      h5 {
+        margin-bottom: 0px;
+        text-align: center;
+        font-weight: 500;
+        color: #7c3706;
+      }
+      h4 {
+        margin-bottom: -20px;
+        text-align: center;
+        font-weight: 500;
+        color: #757064;
+      }
+      h6 {
+        margin-bottom: -20px;
+        text-align: center;
+        font-weight: 500;
+        color: #757064;
+      }
+      h3 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: 500;
+        color: rgb(174, 183, 110);
+      }
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: block;
+        text-align: right;
+
+      }
+      select, input[type="text"]{
+        width: 99%;
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: #1f1f1ff0;
+        color: #e0ead2;
+        text-align: right;
+
+      }
+
+.hh {
+        width: 98%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #444444c3;
+        border-radius: 5px;
+        background-color: #1f1f1f5c;
+        color: #f1f1f1c9;
+        text-align: right;
+
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #ffcc00;
+        color: #1c1c1c;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .btn:hover {
+        background-color: #e6b800;
+      }
+      .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #444;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+        display: none;
+      }
+      .progress-bar-fill {
+        height: 100%;
+        width: 0%;
+        background-color: #840fd8;
+        transition: width 0.3s;
+      }
+      .file-list {
+        margin-top: 15px;
+      }
+      .file-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .file-item input[type="text"] {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .file-item .btn {
+        width: auto;
+        padding: 5px 10px;
+        font-size: 12px;
+      }
+      .loader {
+        display: none;
+        margin: 10px auto;
+        border: 4px solid #444;
+        border-top: 4px solid #840fd8;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+.Documents-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border: none;
+  width: 100%;
+
+  padding: 0px 15px;
+  border-radius: 5px;
+  background-color: rgb(79, 83, 49);
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.folderContainer {
+  width: 40px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.fileBack {
+  z-index: 1;
+  width: 80%;
+  height: auto;
+}
+.filePage {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+.fileFront {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.95;
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+.text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.Documents-btn:hover .filePage {
+  transform: translateY(-5px);
+}
+.Documents-btn:hover {
+  background-color: rgb(58, 58, 94);
+}
+.Documents-btn:active {
+  transform: scale(0.95);
+}
+.Documents-btn:hover .fileFront {
+  transform: rotateX(30deg);
+}
+.input-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.input-container input {
+  border-radius: 0.4rem 0 0 0.4rem;
+  background: #23272F;
+  box-shadow: inset 2px 2px 5px #0e1013, inset -2px -2px 5px #383e4b, 0px 0px 40px rgba(255, 212, 59, 0), 0px 0px 40px rgba(255, 102, 0, 0);
+  width: 100%;
+  flex-basis: 35%;
+  padding: 0.5rem;
+  border: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container input:focus {
+  border: 1px solid #ffd53b64;
+  outline: none;
+}
+
+.input-container button {
+  margin-top: -15px;
+  background: rgb(79, 83, 49);
+  box-shadow: 0px 0px 1px rgba(255, 212, 59, 0.5), 0px 0px 1px rgba(255, 102, 0, 0.5);
+  text-transform: uppercase;
+  color: #fbfbfb;
+  border: none;
+  width: 50px;
+  height: 29px;
+  border-radius: 0 0.4rem 0.4rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container button:hover {
+  box-shadow: 0px 0px 5px rgba(255, 212, 59, 0.5), 0px 0px 40px rgb(79, 83, 49);
+}
+
+@media (max-width: 500px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container input {
+    border-radius: 0.4rem;
+  }
+
+  .input-container button {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+  }
+}
+
+input[type="file"] {
+  width: 100%;
+  color: #fefefe;
+  padding: 2px;
+  background-color: rgb(79, 83, 49);
+  border-radius: 10px;
+  border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: rgb(58, 58, 94);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+span{
+  text-align: right;
+
+}
+.textt{
+  margin-top: 20px;
+}
+.success {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 98%;
+  margin-top: 20px;
+  padding: 12px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #EDFBD8;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.success__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.success__icon path {
+  fill: #84D65A;
+}
+
+.success__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #2B641E;
+}
+
+.success__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.success__close path {
+  fill: #2B641E;
+}
+    </style>
+  </head>
+  <body>  
+    <div class="container">
+      <h3>Aou Help رفع مستندات ومراجعات المواد لموقع </h3>
+      <label for="folderSelect">: اختر المادة</label>
+      <select id="folderSelect"> ..جاري التحميل</select>
+            <h5>لم تجد المادة ؟
+              يمكنك اضافتها من هنا </h5>
+      <div class="input-container">
+        <input type="text" id="newFolderInput" class="hh" placeholder="ادخل اسم المادة">
+                <button class="button" onclick="createFolder()">اضافة</button>
+      </div>
+      <span >: تحديد الملفات </span>
+
+      <br><br>
+      <input type="file" id="fileInput" multiple onchange="displayFiles()">
+      <span class="textt" id="text"> </span>
+
+      <div class="file-list" id="fileList"></div>
+
+      <br><br>
+<button class="Documents-btn" onclick="uploadFiles()">
+  <span class="folderContainer">
+    <svg
+      class="fileBack"
+      width="146"
+      height="113"
+      viewBox="0 0 146 113"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+        fill="url(#paint0_linear_117_4)"
+      ></path>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_4"
+          x1="0"
+          y1="0"
+          x2="72.93"
+          y2="95.4804"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#8F88C2"></stop>
+          <stop offset="1" stop-color="#5C52A2"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+    <svg
+      class="filePage"
+      width="88"
+      height="99"
+      viewBox="0 0 88 99"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="88" height="99" fill="url(#paint0_linear_117_6)"></rect>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_6"
+          x1="0"
+          y1="0"
+          x2="81"
+          y2="160.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="white"></stop>
+          <stop offset="1" stop-color="#686868"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <svg
+      class="fileFront"
+      width="160"
+      height="79"
+      viewBox="0 0 160 79"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+        fill="url(#paint0_linear_117_5)"
+      ></path>
+      <defs>
+        <linearGradient
+          id="paint0_linear_117_5"
+          x1="38.7619"
+          y1="8.71323"
+          x2="66.9106"
+          y2="82.8317"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#C3BBFF"></stop>
+          <stop offset="1" stop-color="#51469A"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </span>
+  <p class="text">رفع</p>
+</button>
+
+
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+        <div class="loader" id="loader"></div>
+      </div>
+      <div id="result"></div>
+
+<div id="success" class="success">
+    <div class="success__icon">
+      <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z" fill="#393a37" fill-rule="evenodd"></path></svg>
+    </div>
+    <div class="success__title"> تم رفع الملفات بنجاح</div>
+    <div class="success__close"><svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z" fill="#393a37"></path></svg></div>
+</div>
+    </div>
+
+
+
+
+    <script>
+      let fileData = [];
+
+      function fetchFolders() {
+        google.script.run.withSuccessHandler(updateFolderList).getFolders();
+      }
+
+      function updateFolderList(folders) {
+        const select = document.getElementById('folderSelect');
+        select.innerHTML = '';
+        folders.forEach(folder => {
+          const option = document.createElement('option');
+          option.value = folder.id;
+          option.textContent = folder.name;
+          select.appendChild(option);
+        });
+      }
+
+      function createFolder() {
+        const folderName = document.getElementById('newFolderInput').value.trim();
+        if (!folderName) {
+          alert('Please enter a valid folder name.');
+          return;
+        }
+
+        const select = document.getElementById('folderSelect');
+        const tempOption = document.createElement('option');
+        tempOption.textContent = '...جاري الانشاء';
+        tempOption.disabled = true;
+        select.appendChild(tempOption);
+        select.value = tempOption.value;
+
+        toggleLoader(true);
+        google.script.run.withSuccessHandler((newFolder) => {
+          toggleLoader(false);
+
+          
+          tempOption.remove(); 
+          fetchFolders()
+
+          select.value = newFolder.id;
+
+          document.getElementById('newFolderInput').value = '';
+          toggleFolderInput();
+        }).createNewFolder(folderName);
+      }
+
+      function displayFiles() {
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+    const txt = document.getElementById('text');
+    txt.innerText=`: اعادة التسمية  (اختياري)`
+
+    fileList.innerHTML = '';
+    fileData = Array.from(fileInput.files).map(file => ({
+        file,
+        newName: file.name
+    }));
+
+    fileData.forEach((data, index) => {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = `
+            <input type="text" id="file-name-${index}" name="file-name-${index}" value="${data.file.name}" onchange="renameFile(${index}, this.value)">
+            ${index+1}
+        `;
+        fileList.appendChild(fileItem);
+    });
+}
+function removeFile(index) {
+    fileData.splice(index, 1);  
+    displayFiles();  
+}
+
+      function renameFile(index, newName) {
+        const file = fileData[index].file;
+        const extension = file.name.split('.').pop();
+        fileData[index].newName = `${newName.split('.')[0]}.${extension}`;
+      }
+
+
+
+    function uploadFiles() {
+  const folderId = document.getElementById('folderSelect').value;
+
+  if (!folderId || fileData.length === 0) {
+    alert('Please select a folder and files to upload.');
+    return;
+  }
+
+  toggleProgress(true); 
+  let uploadedFiles = 0;
+  let failedFiles = 0;
+
+  fileData.forEach((data, index) => {
+    const reader = new FileReader();
+    
+    reader.onload = function (e) {
+      const fileContent = {
+        data: e.target.result.split(',')[1], 
+        mimeType: data.file.type,
+      };
+
+      google.script.run
+        .withSuccessHandler(() => {
+          uploadedFiles++;
+          updateProgress(uploadedFiles / fileData.length); 
+
+          if (uploadedFiles + failedFiles === fileData.length) {
+            toggleProgress(false); 
+            if (failedFiles === 0) {
+              document.getElementById("success").style.display = "flex"; 
+            } else {
+              alert(`Uploaded ${uploadedFiles} files successfully, but ${failedFiles} failed.`);
+            }
+          }
+        })
+        .withFailureHandler((error) => {
+          failedFiles++;
+          console.error(`Error uploading file: ${data.newName}`, error);
+          alert(`Failed to upload: ${data.newName}`);
+
+          if (uploadedFiles + failedFiles === fileData.length) {
+            toggleProgress(false); 
+            alert(`Uploaded ${uploadedFiles} files successfully, but ${failedFiles} failed.`);
+          }
+        })
+        .uploadFileToFolder(folderId, data.newName, fileContent);
+    };
+
+    reader.onerror = function () {
+      failedFiles++;
+      console.error(`Error reading file: ${data.newName}`);
+      alert(`Failed to read file: ${data.newName}`);
+    };
+
+    reader.readAsDataURL(data.file);
+  });
+}
+
+      function updateProgress(progress) {
+        const progressBarFill = document.getElementById('progressBarFill');
+        progressBarFill.style.width = `${progress * 100}%`;
+      }
+
+      function toggleLoader(show) {
+        const loader = document.getElementById('loader');
+        loader.style.display = show ? 'block' : 'none';
+      }
+
+      function toggleProgress(show) {
+        const progressBar = document.getElementById('progressBar');
+        progressBar.style.display = show ? 'block' : 'none';
+      }
+
+      fetchFolders();
+    </script>
+  </body>
+</html>
