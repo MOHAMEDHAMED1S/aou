@@ -102,7 +102,7 @@ searchInput.addEventListener('input', function() {
 </script>
 
 <script>
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbwjEnFYm6AKlSrmNJDgTMe8bGnP5KJr8yrT1yUtLAcBkWe1AIwNIrRU9DRlcLMLzQuc4w/exec"; 
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbz3_MJPyzKMdCTMf2uvF-Dxg45LYaUwWVA5M0IWzPmkvhFJLiLEG5PEmPO8Ynd7hWli/exec"; 
 
   async function loadSubjects() {
 
@@ -115,7 +115,7 @@ searchInput.addEventListener('input', function() {
     subjects.forEach(subject => {
       const subjectElement = document.createElement("a");
       subjectElement.className = "card-link";
-      subjectElement.href = `media files lectures.html?subject=${subject}`;
+      subjectElement.href = `general files lectures.html?subject=${subject}`;
       subjectElement.innerHTML = `
         <div class="card" style="
     margin-bottom: 15px;
