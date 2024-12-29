@@ -79,3 +79,26 @@ function showGame() {
 function closeGame() {
         document.getElementById('game-container').style.display = 'none';
     }
+// الحصول على عنصر الإدخال (Checkbox)
+const toggleSwitch = document.querySelector('.theme .input');
+
+// وظيفة لتبديل الوضع
+function switchTheme(event) {
+    const isDarkMode = event.target.checked;
+
+    // تفعيل الوضع الداكن أو إيقافه داخل الصفحة
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+
+    // استدعاء واجهة Android لإعلام التطبيق
+    if (window.AndroidInterface) {
+        window.AndroidInterface.toggleDarkMode(isDarkMode);
+    }
+}
+
+// استماع لتغيير الحالة
+toggleSwitch.addEventListener('change', switchTheme);
+
+// استعادة الوضع من التخزين المحلي عند التحميل
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+toggleSwitch.checked = currentTheme === 'dark';
