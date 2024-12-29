@@ -1,6 +1,6 @@
 function doGet() {
     return HtmlService.createHtmlOutputFromFile('index')
-      .setTitle('رفع مستندات ومراجعات المواد ');//هنا هنغير العنوان علي حسب احنا فين عشان دا اللي بيظهر 
+      .setTitle('Computer science slides upload');//هنا هنغير العنوان علي حسب احنا فين عشان دا اللي بيظهر 
   }
   
   const MAIN_FOLDER_ID = "هنا id المجلد اللي هيكون فيه مجلدات المواد";
