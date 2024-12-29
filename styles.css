@@ -5,7 +5,9 @@
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
     text-decoration: none; 
- 
+    overflow: hidden; 
+    overflow-y: scroll; 
+    scrollbar-width: none; 
 }
 
 body {
