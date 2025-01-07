@@ -10,7 +10,6 @@
             const timerElement = document.getElementById('timer');
             const messageElement = document.getElementById('message');
 
-            // تحديث الرسالة كل ثانية
             const interval = setInterval(() => {
                 timerElement.textContent = countdown;
                 countdown--;
@@ -20,7 +19,7 @@
                     
                 }
                 if (countdown < 0) {
-                    clearInterval(interval); // إيقاف المؤقت
+                    clearInterval(interval); 
                     messageElement.textContent = "....جاري تحويلك الآن"
                     window.location.href = "https://aou-hub.netlify.app/"; // التحويل
                 }
@@ -62,7 +61,7 @@
             font-size: 1.2rem;
             color: #e0e0e0;
         }
-
+        
         noscript p {
             color: #ff0000;
             font-size: 1.2rem;
@@ -104,7 +103,7 @@
     ">AOU Hub</h1>
                <div class="loader">
             <span id="time">.ثواني </span>
-            <span id="timer"></span>
+            <span id="timer"  style="color: #93cfef;"></span>
             <span>  سيتم تحويلك في غضون </span>
             <p id="message"></p>
 
