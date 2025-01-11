@@ -8,7 +8,7 @@
     موقع شامل لطلاب الجامعة العربيه المفتوحة يوفر مراجعات المواد الدراسية، جروبات واتساب للمواد والتخصصات، قسم للمساعدة ، حاسبة GPA، وروابط مهمة للجامعة. منصة مثالية لدعم الطلاب وتحسين تجربتهم التعليمية." />
     <script>
         function countdownAndRedirect() {
-            let countdown = 5; // عدد الثواني
+            let countdown = 5; 
             const timerElement = document.getElementById('timer');
             const messageElement = document.getElementById('message');
 
@@ -23,7 +23,7 @@
                 if (countdown < 0) {
                     clearInterval(interval); 
                     messageElement.textContent = "....جاري تحويلك الآن"
-                    window.location.href = "https://aou-hub.netlify.app/"; // التحويل
+                    window.location.href = "https://aou-hub.netlify.app/"; 
                 }
             }, 1000);
         }
